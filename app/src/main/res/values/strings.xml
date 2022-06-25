@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">ComposeLoginZKB</string>
+    <string name="screen_login" translatable="false">screen_login</string>
+    <string name="screen_home" translatable="false">screen_home</string>
+    <string name="screen_login_username_label">Name</string>
+    <string name="screen_login_username_placeholder">John Doe</string>
+    <string name="screen_login_email_label">Email</string>
+    <string name="screen_login_email_placeholder">name@example.com</string>
+    <string name="screen_login_register">Register</string>
+    <string name="screen_login_birthday_label">Birthday</string>
+    <string name="screen_login_birthday_placeholder">DD.MM.YYYY</string>
+    <string name="home_screen_registration_thanks">Thank you for registering %s.</string>
+    <string name="home_screen_email">Your email is %s.</string>
+    <string name="home_screen_birthday">You were born %s.</string>
+    <string name="screen_login_birthday_button">Birthday: %s</string>
+    <string name="screen_login_invalid_name">Name needs at least one character.</string>
+    <string name="screen_login_invalid_email">Invalid email.</string>
+    <string name="screen_login_invalid_birthday">Invalid birthday.</string>
+</resources>

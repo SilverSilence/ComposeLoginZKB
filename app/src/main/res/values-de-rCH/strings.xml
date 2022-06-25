@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="screen_login_username_label">Name</string>
+    <string name="screen_login_username_placeholder">Hans Muster</string>
+    <string name="screen_login_email_label">Email</string>
+    <string name="screen_login_email_placeholder">name@beispiel.com</string>
+    <string name="screen_login_register">Registrieren</string>
+    <string name="screen_login_birthday_label">Geburtstag</string>
+    <string name="screen_login_birthday_placeholder">DD.MM.YYYY</string>
+    <string name="home_screen_registration_thanks">Danke für die Registrierung, %s.</string>
+    <string name="home_screen_email">Deine Email ist %s.</string>
+    <string name="home_screen_birthday">Du bist geboren am: %s.</string>
+    <string name="screen_login_birthday_button">Geburtstag: %s</string>
+    <string name="screen_login_invalid_name">Mindestlänge: 1</string>
+    <string name="screen_login_invalid_email">Ungültige Email.</string>
+    <string name="screen_login_invalid_birthday">Ungültiger Geburtstag.</string>
+</resources>
