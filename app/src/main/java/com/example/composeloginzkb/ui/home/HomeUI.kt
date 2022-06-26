@@ -1,4 +1,4 @@
-package com.example.composeloginzkb.screen.home
+package com.example.composeloginzkb.ui.home
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.Arrangement
@@ -12,10 +12,10 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composeloginzkb.R
-import com.example.composeloginzkb.screen.home.HomeUI.BIRTHDAY_TEST_TAG
-import com.example.composeloginzkb.screen.home.HomeUI.EMAIL_TEST_TAG
-import com.example.composeloginzkb.screen.home.HomeUI.NAME_TEST_TAG
-import com.example.composeloginzkb.screen.home.HomeUI.TEST_TAG
+import com.example.composeloginzkb.ui.home.HomeUI.BIRTHDAY_TEST_TAG
+import com.example.composeloginzkb.ui.home.HomeUI.EMAIL_TEST_TAG
+import com.example.composeloginzkb.ui.home.HomeUI.NAME_TEST_TAG
+import com.example.composeloginzkb.ui.home.HomeUI.TEST_TAG
 
 object HomeUI {
     @VisibleForTesting

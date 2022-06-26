@@ -6,8 +6,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.composeloginzkb.screen.Screen
-import com.example.composeloginzkb.screen.home.HomeUI
-import com.example.composeloginzkb.screen.login.LoginUI
+import com.example.composeloginzkb.ui.home.HomeUI
+import com.example.composeloginzkb.ui.login.LoginUI
 
 fun NavGraphBuilder.loginGraph(navController: NavController) {
     composable(Screen.LoginScreen.route) {

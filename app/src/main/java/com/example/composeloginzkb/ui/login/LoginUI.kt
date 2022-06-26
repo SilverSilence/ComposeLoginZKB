@@ -1,4 +1,4 @@
-package com.example.composeloginzkb.screen.login
+package com.example.composeloginzkb.ui.login
 
 import android.content.Context
 import androidx.annotation.VisibleForTesting
@@ -25,14 +25,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.composeloginzkb.R
-import com.example.composeloginzkb.screen.login.LoginUI.BIRTHDAY_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.BIRTHDAY_WARNING_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.EMAIL_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.EMAIL_WARNING_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.NAME_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.NAME_WARNING_TEST_TAG
-import com.example.composeloginzkb.screen.login.LoginUI.TEST_TAG
+import com.example.composeloginzkb.screen.login.LoginViewModel
 import com.example.composeloginzkb.ui.datepicker.DatePickerUtil
+import com.example.composeloginzkb.ui.login.LoginUI.BIRTHDAY_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.BIRTHDAY_WARNING_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.EMAIL_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.EMAIL_WARNING_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.NAME_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.NAME_WARNING_TEST_TAG
+import com.example.composeloginzkb.ui.login.LoginUI.TEST_TAG
 import java.time.LocalDateTime
 
 object LoginUI {
