@@ -4,7 +4,8 @@ import android.content.Context
 import android.util.Patterns
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
-import com.example.composeloginzkb.data.EncryptedStorageUtil
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKeys
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import java.time.LocalDateTime
@@ -62,7 +63,7 @@ class LoginViewModel : ViewModel() {
         //val success = some backend call for registration
         //
         val success = true
-        EncryptedStorageUtil.store(
+        persistToEncryptedFile(
             context,
             name.value,
             email.value,
@@ -83,7 +84,13 @@ class LoginViewModel : ViewModel() {
     }
 
     private fun isEmailValid(): Boolean {
-        return Patterns.EMAIL_ADDRESS.matcher(email.value).matches()
+        return if (email.value.contains("@")) {
+            return try {
+                Patterns.EMAIL_ADDRESS.matcher(email.value).matches()
+            } catch (e: Exception) {
+                false
+            }
+        } else false
     }
 
     private fun isBirthdayValid(): Boolean {
@@ -93,5 +100,34 @@ class LoginViewModel : ViewModel() {
             val date = birthDate!!
             date.isBefore(beforeDate) && date.isAfter(afterDate)
         }
+    }
+
+    private fun persistToEncryptedFile(
+        context: Context,
+        name: String,
+        email: String,
+        birthday: String
+    ) {
+        var masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+
+        var sharedPreferences = EncryptedSharedPreferences.create(
+            "secret_shared_prefs",
+            masterKeyAlias,
+            context,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+        )
+
+        val editor = sharedPreferences.edit()
+        editor.putString(nameKey, name)
+        editor.putString(emailKey, email)
+        editor.putString(birthdayKey, birthday)
+        editor.apply()
+    }
+
+    companion object {
+        private const val nameKey = "NAME"
+        private const val emailKey = "EMAIL"
+        private const val birthdayKey = "BIRTHDAY"
     }
 }
